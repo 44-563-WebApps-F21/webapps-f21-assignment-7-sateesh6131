@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
     header {
-      color: orangered;
+      color: darkgray;
       font-family: 'Times New Roman', Times, serif;
       font-size: xx-large;
       text-shadow: 2px 2px 4px #000000;
@@ -24,18 +24,18 @@
     }
 
     #target {
-      color: red;
+      color: darkseagreen;
     }
 
     #countdown {
-      color: green;
+      color: goldenrod;
     }
   </style>
 
 </head>
 
 <body>
-  <header>KARUN KUMAR AKKALA Reaction Timer</header>
+  <header>Sateesh Reddy Dantla Reaction Timer</header>
   <br>
   <p id="target">Your time</p>
   <p id="countdown">Count</p>
@@ -50,11 +50,10 @@
     }
 
     function startTime() {
-      var startCount = Math.floor(Math.random() * 10 + 2)
-      for (let i = 0; i < startCount; i++) {
+        for (let i = 0; i < 4; i++) {
         setTimeout(() => {
           document.getElementById("countdown").innerHTML = "Count: " + i
-        }, (startCount - i) * 1000)
+        }, (3 - i) * 1000)
       }
       setTimeout(() => {
         checkMyTime()
