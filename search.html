@@ -25,7 +25,9 @@
             </div>
             <div class="col-sm-3" style="background-color: beige;" id="tries">Number of tries is zero.</div>
             <div class="col-sm-3" style="background-color: cornsilk;" id="distance">Distance is unknown.</div>
-            
+            <br>
+            <button onclick="newGame()">Reset</button>
+
         </div>
 
         <div class="container">
@@ -153,10 +155,22 @@
 
             }
 
+            function newGame() {
+            triesCount = 0
+            animalLocation = Math.floor(Math.random() * 23 + 0)
+            document.getElementById("tries").innerHTML = "Number of tries is 0."
+            for (var i = 0; i < 24; i++) {
+                if (ids[i] == ids[animalLocation])
+                    document.getElementById(ids[i]).src = "panther.jpg"
 
-           
+            }
+        }
+
+
+
         </script>
     </div>
 
 </body>
+
 </html>

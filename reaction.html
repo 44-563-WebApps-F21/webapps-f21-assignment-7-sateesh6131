@@ -50,10 +50,11 @@
     }
 
     function startTime() {
-        for (let i = 0; i < 4; i++) {
+        var startCount = Math.floor(Math.random() * 10 + 2)
+      for (let i = 0; i < startCount; i++) {
         setTimeout(() => {
           document.getElementById("countdown").innerHTML = "Count: " + i
-        }, (3 - i) * 1000)
+        }, (startCount - i) * 1000)
       }
       setTimeout(() => {
         checkMyTime()
